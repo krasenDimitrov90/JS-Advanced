@@ -58,7 +58,7 @@ function solve() {
     })
     textResult += furnitures.join(', ') + '\n';
     textResult += 'Total price: '
-    textResult += ((prices.reduce((acc , el) => acc + el ,0)) / prices.length).toFixed(2) + '\n';
+    textResult += ((prices.reduce((acc , el) => acc + el ,0))).toFixed(2) + '\n';
     textResult += 'Average decoration factor: '
     textResult += ((factors.reduce((acc , el) => acc + el ,0)) / factors.length)
 
