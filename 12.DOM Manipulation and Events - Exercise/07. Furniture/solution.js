@@ -8,9 +8,7 @@ function solve() {
   buyButonElement.addEventListener('click', buy)
 
   function generate() {
-    //let arr = JSON.parse(furnitureListElement.value)
-
-
+    
     Array.from(JSON.parse(furnitureListElement.value))
       .forEach(line => {
         let checkBoxElement = document.createElement('INPUT');
