@@ -1,29 +1,30 @@
-function solve(x , y) {
-    return function add() {
-        add.bind(this, x , y);
-        return x + y;
+function solution() {
+    let result = '';
+    return {
+        append(str) {
+            result += str;
+        },
+        removeStart(num) {
+            result = result.substring(num)
+        },
+        removeEnd(num) {
+            result = result.substring(0, result.length - num)
+        },
+        print() {
+            console.log(result);
+        }
     }
 }
 
-let firstFunc = solve(5);
-console.log(firstFunc(10));
-// //let secondFunc = solve;
-// //firstFunc(5)
-// //secondFunc(6)
-
-// let person = {
-//     name: 'Peter',
-//     lastName: 'Petrov',
-//     introduce() {
-//         let getFullName =  () => {
-//             return this.name + ' ' + this.lastName;
-//         }
-//         console.log(`Hello my name is ${getFullName()}`);
-
-//     }
-// }
-
-// person.introduce();
 
 
+let firstZeroTest = solution();
+let second = solution();
+second.append('Krasen')
+second.print()
 
+firstZeroTest.append('hello');
+firstZeroTest.append('again');
+firstZeroTest.removeStart(3);
+firstZeroTest.removeEnd(4);
+firstZeroTest.print();
