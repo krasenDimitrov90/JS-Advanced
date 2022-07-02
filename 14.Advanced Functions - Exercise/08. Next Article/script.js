@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function getArticleGenerator(articles) {
 
     return function show() {
@@ -12,3 +13,8 @@ function getArticleGenerator(articles) {
 }
 
 
+=======
+function getArticleGenerator(articles) {
+    // TODO
+}
+>>>>>>> dd8b20849d2236d40f3151f4acf85fbb2b88dfd6
