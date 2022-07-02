@@ -16,8 +16,6 @@ function solution() {
     }
 }
 
-
-
 let firstZeroTest = solution();
 let second = solution();
 second.append('Krasen')
