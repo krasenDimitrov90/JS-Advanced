@@ -1,3 +1,5 @@
+// It took me 3 hours for this task :D
+
 class Company {
     departments = {};
     addEmployee(name, salary, position, department) {
