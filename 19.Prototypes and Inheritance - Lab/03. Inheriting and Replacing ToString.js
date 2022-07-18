@@ -28,12 +28,12 @@ function toStringExtension() {
     Teacher.prototype = Object.create(Person.prototype);
     Student.prototype = Object.create(Person.prototype);
 
-    let person = new Person ('Krasen', 'abv')
-    let teacher = new Teacher('Doch' , 'gmail', 'I')
-    let student = new Student('Miro' , 'twit' , 'II')
-    console.log(person.toString());
-    console.log(teacher.toString());
-    console.log(student.toString());
+    // let person = new Person ('Krasen', 'abv')
+    // let teacher = new Teacher('Doch' , 'gmail', 'I')
+    // let student = new Student('Miro' , 'twit' , 'II')
+    // console.log(person.toString());
+    // console.log(teacher.toString());
+    // console.log(student.toString());
 
     return {
         Person,
