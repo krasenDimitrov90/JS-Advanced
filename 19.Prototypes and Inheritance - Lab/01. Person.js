@@ -21,3 +21,22 @@ console.log(person.fullName); //George Peterson
 person.fullName = "Nikola Tesla";
 console.log(person.firstName); //Nikola
 console.log(person.lastName); //Tesla
+
+
+//This way also works , but SoftUni judge doesn't think so ;D
+
+// function Person(firstName, lastName) {
+//     this.firstName = firstName;
+//     this.lastName = lastName
+    
+// }
+
+// Object.defineProperty(Person.prototype, 'fullName', {
+//     get() {
+//       return `${this.firstName} ${this.lastName}`;
+//     },
+  
+//     set(value) {
+//       [this.firstName, this.lastName] = value.split(" ");
+//     }
+//   });
