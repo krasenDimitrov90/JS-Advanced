@@ -48,13 +48,13 @@ function hierarchy() {
     
     function Circle(radius) {
         Figure.call(this);
-        this.radius = radius * this.multiplyer;
+        this.radius = radius;
     }
     
     function Rectangle(width, height, units) {
         Figure.call(this,units);
-        this.width = width * this.multiplyer;
-        this.height = height * this.multiplyer;
+        this.width = width;
+        this.height = height;
     }
     
     Circle.prototype = Object.create(Figure.prototype, {
