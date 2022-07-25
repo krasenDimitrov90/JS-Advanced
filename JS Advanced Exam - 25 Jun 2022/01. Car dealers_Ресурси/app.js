@@ -1,4 +1,7 @@
 // I do it on my own ;D but only take 92/100
+// After help from SoftUni forum 100/100 
+// The problem was that I was declaire - let carDetails = {}; in function solve scope
+// instead had to declaire it in publishBtnEl.addEventListener 
 
 
 window.addEventListener("load", solve);
@@ -10,11 +13,11 @@ function solve() {
   let soldCarsListEl = document.getElementById('cars-list');
   let totalProfitEl = document.getElementById('profit');
 
-  let carDetails = {};
+  
   let totalProfit = 0;
 
-
   publishBtnEl.addEventListener('click', (e) => {
+    let carDetails = {};
     e.preventDefault();
     let hasEmptyInput = Array.from(inputElements).some(x => !x.value);
     if (hasEmptyInput) {
