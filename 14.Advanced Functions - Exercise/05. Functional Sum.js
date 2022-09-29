@@ -1,15 +1,16 @@
-function add(a) {
+// from internet
 
-    let sum = a
+function add(num) {
 
-    function f(b) {
-        sum += b
-        return f
+
+    function iner(num2) {
+        num += num2;
+
+        return iner;
     }
 
-    f.toString = function () { return sum }
-
-    return f
+    iner.toString = () => num;
+    return iner;
 }
 
 console.log(add(1)(6)(-3).toString());

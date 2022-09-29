@@ -5,7 +5,7 @@ function getFibonator() {
         if (arr.length > 0) {
             currentNum = arr[arr.length - 1];
         }
-        
+
         let previousNum = 0
         if (arr.length > 1) {
             previousNum = arr[arr.length - 2];
@@ -15,6 +15,20 @@ function getFibonator() {
 
     }
 }
+
+// this is from internet
+// function getFibonator() {
+
+//     let [a, b] = [0, 1];
+
+//     return function iner() {
+//         let c = a + b;
+//         [a, b] = [b, c];
+
+//         return a;
+//     }
+// }
+
 
 
 let fib = getFibonator();

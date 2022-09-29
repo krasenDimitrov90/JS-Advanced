@@ -1,26 +1,20 @@
-// function solve(input) {
-//     let arr = input.slice(0);
-//     while (arr.length > 1) {
-//         let arrL = arr.length;
-//         for (let i = 0; i < arrL; i += 2) {
-//             if (arr[i] > arr[i + 1]) {
-//                 arr.splice(i + 1 , 1);
-//             } else {
-//                 arr.splice(i , 1);
-//             }
-//         }
-//         console.log(arr);
-//     }
-// }
+function getTypes(...args) {
 
-// solve([9, 5, 4, 7, 6, 3, 8, 2])
+    const typeCounter = args.reduce((acc, arg) => {
+        let type = typeof arg;
+       
+        if (!(acc.hasOwnProperty(type))) {
+            acc[type] = 0;
+        }
 
-function pow(x, n) {
-    if (n == 1) {
-      return x;
-    } else {
-      return x * pow(x, n - 1);
-    }
-  }
-  
-  console.log( pow(2, 3) );
+        acc[type] += 1;
+        console.log(`${type}: ${arg}`);
+        return acc
+    }, {})
+
+    Object.keys(typeCounter)
+        .sort((a, b) => typeCounter[b] - typeCounter[a])
+        .forEach(x => console.log(`${x} = ${typeCounter[x]}`))
+}
+
+getTypes(32, 'cat', 42, function () { console.log('Hello world!'); })
