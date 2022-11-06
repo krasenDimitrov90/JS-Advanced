@@ -1,20 +1,15 @@
 function factory(library, orders) {
 
-    let products = [];
+  return orders.map(({ template, parts  }) => {
+      const methods = parts.reduce((acc, p) => {
+          acc[p] = library[p];
+          return acc
+      }, {})
 
-    for (let order of orders) {
-        let product = order.template;
-
-        for (let part of order.parts) {
-            product[part] = library[part];
-        }
-        
-        products.push(product)
-    }
-
-    return products;
+      methods.name = template.name
+      return methods
+  })
 }
-
 
 const library = {
     print: function () {
